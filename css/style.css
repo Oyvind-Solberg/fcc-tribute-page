@@ -40,6 +40,7 @@ a {
     position: relative;
 }
 
+
 .titles::before {
     position: absolute;
     top: 0;
