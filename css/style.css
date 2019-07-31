@@ -24,7 +24,7 @@ a {
 }
 
 /* Utillity classes */
-.container {
+.flex-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,6 +34,12 @@ a {
     width: 100%;
 }
 
+.container {
+    margin: 0 2rem;
+}
+
+
+/* Titles and text */
 .titles {
     height: 150px;
     background: linear-gradient(var(--Primary-color), var(--Light-color));
@@ -53,20 +59,27 @@ a {
 }
 
 .text-format {
-    width: 65%;
-    padding: 7rem 3rem;
+    max-width: 1200px;
+    padding: 2rem 6rem;
+    margin: auto;
     line-height: 2;
     text-align: left;
     background-color: #fff;
 }
 
 .text-format p {
-    margin: 1rem 0;
+    margin: 4rem 0;
+}
+
+.text-format ul {
+    padding: 4rem 0;
+    list-style: none;
 }
 
 .text-format li {
-    padding: 0.75rem 0;
+    padding: 1rem 0;
     list-style: none;
+    line-height: 1.5;
 }
 
 .list-space {
@@ -74,6 +87,7 @@ a {
     padding-left: 1.5rem;
 }
 
+/* Fixed positions */
 .top-lock {
     position: fixed;
     top: 0;
@@ -121,7 +135,7 @@ a {
 }
 
 #home .header-title .titles {
-    height: calc(200px);
+    height: 200px;
 }
 
 #title {    
@@ -180,6 +194,9 @@ a {
 /* Awards */
 #awards .text-format {
     margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Footer */
@@ -189,8 +206,94 @@ a {
     background-color: var(--Dark-color);
 }
 .article-footer .text-format {
-    padding: 0rem 0;
+    padding: 0;
     text-align: center;
     color: #fff;
     background-color: var(--Dark-color);
+}
+
+.article-footer .text-format p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Media queries */
+
+/* Tablet 768px */
+@media only screen and (max-width: 768px) {
+    #main-nav {
+        display: none;
+    }
+    .text-format {
+        padding: 2rem 2rem;
+    }
+
+    .list-space {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .text-format p {
+        margin: 2rem 0;
+    }
+
+    .text-format ul {
+        padding: 2rem 0;
+        list-style: none;
+    }
+
+    #home .header-title .titles {
+        height: 120px;
+    }
+
+    #main article .titles {
+        height: 100px;
+    }
+
+    .titles::before {
+        height: 1.5rem;
+    }
+
+    #title {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+    }
+
+    .titles h2 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    #img-caption {
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0008;
+    z-index: 1;
+
+
+}
+
+/* Phone 568px */
+@media only screen and (max-width: 568px) {
+    .container {
+        margin: 0 1rem;
+    }
+
+    .list-space {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    .text-format p {
+        margin: 1rem 0;
+    }
+
+    .text-format ul {
+        padding: 1rem 0;
+        list-style: none;
+    }
+    .titles {
+
+    }
 }
